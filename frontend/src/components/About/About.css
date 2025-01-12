@@ -1,0 +1,124 @@
+.about {
+  background-color: hsl(219, 48%, 8%);
+  min-height: 100vh;
+  display: flex;
+}
+
+.aboutContainer {
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  height: 70vh;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: right;
+  padding: 2vmax;
+  box-sizing: border-box;
+  transform: translateX(100vw) translateY(-5%);
+  animation: aboutContainerAnimation 1s ease-in forwards;
+}
+
+.aboutContainer > p {
+  font-family: Ubuntu + Mono;
+  text-align: right;
+  color: rgba(15, 15, 15, 0.822);
+  font-size: 1.5vmax;
+  width: 60%;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  line-height: 60px;
+}
+
+.aboutContainer2 {
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  min-height: 70vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 2vmax;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+  transform: translateX(-100vw) translateY(5%);
+  animation: aboutContainer2Animation 1s ease-in forwards;
+}
+.aboutContainer2 > div {
+  font-family: Ubuntu + Mono;
+  text-align: left;
+  color: rgba(15, 15, 15, 0.822);
+  font-size: 1.5vmax;
+  width: 60%;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  line-height: 60px;
+  align-self: flex-end;
+}
+
+.aboutContainer3 {
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  min-height: 60vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%) rotate(360deg);
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+  overflow: hidden;
+  animation: aboutContainer3Animation 1s ease-in 1s forwards;
+}
+.aboutContainer3 > div > h4 {
+  font-family: Merriweather;
+}
+.aboutContainer3 > div > p {
+  font-family: Merriweather;
+  color: rgba(15, 15, 15, 1);
+  font-size: 1.5vmax;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  line-height: 30px;
+}
+
+.aboutContainer3 > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  transition: all 1s;
+  margin: 0 0 2rem 0;
+}
+.aboutContainer3 > img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+}
+
+@keyframes aboutContainerAnimation {
+  to {
+    transform: translateX(-5%) translateY(5%);
+  }
+}
+
+@keyframes aboutContainer2Animation {
+  to {
+    transform: translateX(5%) translateY(-5%);
+  }
+}
+@keyframes aboutContainer3Animation {
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about > div {
+    font-size: 1vmax;
+  }
+  .aboutContainer3 > img {
+    width: 100px;
+    height: 100px;
+  }
+}
